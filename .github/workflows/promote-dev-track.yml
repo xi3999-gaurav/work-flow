@@ -52,7 +52,7 @@ jobs:
           # Clear track-dev.yml
           echo "---" > track-dev.yml
           echo "tracks:" >> track-dev.yml
-          echo "- { slug: ${{ inputs.slug }} , id: ${{ env.ID }} }" >>track-dev.yml
+          echo "  - { slug: ${{ inputs.slug }} , id: ${{ env.ID }} }" >>track-dev.yml
 
       - name: Promote dev tracks
         uses: ./.github/actions/track-promote
