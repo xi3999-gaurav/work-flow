@@ -1,0 +1,12 @@
+slug: test2
+id: kje72pec3ynr
+title: Sandbox container
+teaser: Get started quickly with a single container-based sandbox host
+description: Get started quickly with a container-based sandbox host. Choose a container
+  when you need a fast, lightweight Linux system.
+icon: https://cdn.instruqt.com/assets/templates/ubuntu.png
+tags: []
+owner: instruqt-support
+developers:
+- gaurav@instruqt.com
+checksum: "3326528036816180239"
