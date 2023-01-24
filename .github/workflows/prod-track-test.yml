@@ -38,14 +38,14 @@ jobs:
       uses: ./.github/actions/install-yq
 
     # Needed for first commit of repository
-    - name: Check if track-slugs.yml exists
+    - name: Check if track-dev.yml exists
       id: check_slugs
       uses: andstor/file-existence-action@v1
       with:
-        files: "${{ env.TRACK_DIR }}/track-slugs.yml"
+        files: "${{ env.TRACK_DIR }}/track-dev.yml"
 
     - name: Create Matrix Data
-      run: echo "TRACKS=$(yq -o j $TRACK_DIR/track-slugs.yml | jq tostring | sed -e 's/^"//' -e 's/"$//')" >> $GITHUB_ENV
+      run: echo "TRACKS=$(yq -o j $TRACK_DIR/track-dev.yml | jq tostring | sed -e 's/^"//' -e 's/"$//')" >> $GITHUB_ENV
       if: steps.check_slugs.outputs.files_exists == 'true'
 
     - id: set-matrix
