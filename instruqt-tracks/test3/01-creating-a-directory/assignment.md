@@ -15,7 +15,7 @@ difficulty: basic
 timelimit: 600
 ---
 
-🤖 Let's start
+🤖 Let's startsrt
 ==============
 
 Create a directory with the name `instruqt` to complete this challenge.
