@@ -1,6 +1,6 @@
 ---
 slug: creating-a-directory
-id: iswyzp8hhtg6
+id: f8woaddpx4fo
 type: challenge
 title: Creating a directory
 teaser: Learn how to create directory
@@ -15,7 +15,7 @@ difficulty: basic
 timelimit: 600
 ---
 
-🤖 Let's start
+🤖 Let's starts
 ==============
 
 Create a directory with the name `instruqt` to complete this challenge.

@@ -36,7 +36,7 @@ jobs:
       uses: ./.github/actions/install-yq
     
     - name: Create Matrix Data
-      run: echo "TRACKS=$(yq -o j $TRACK_DIR/track-slugs.yml | jq tostring | sed -e 's/^"//' -e 's/"$//')" >> $GITHUB_ENV
+      run: echo "TRACKS=$(yq -o j $TRACK_DIR/track-dev.yml | jq tostring | sed -e 's/^"//' -e 's/"$//')" >> $GITHUB_ENV
 
     - id: set-matrix
       run: echo "::set-output name=matrix::${{ env.TRACKS }}"
