@@ -64,3 +64,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Promoting ${{ inputs.slug }} track
+          
+      - name: Delete Dev Track
+        run:
+          instruqt track delete ${{ inputs.slug }}-dev
