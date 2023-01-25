@@ -4,7 +4,7 @@
 # This workflow will Delete a DEV track back to its PROD version
 #
 ##############################################################################
-name: delete
+name: Delete
 
 env:
   INSTRUQT_TOKEN: ${{ secrets.INSTRUQT_TOKEN }}
@@ -42,9 +42,6 @@ jobs:
       - name: Get Track ID
         run: echo "ID=$(TRACKNAME=${{ inputs.slug }} yq eval '.tracks[] | select(.slug == env(TRACKNAME) ) | .id' instruqt-tracks/track-slugs.yml)" >> $GITHUB_ENV
 
-      - name: Update file permissions
-        run: sudo chmod -R a+rwx ${{ env.TRACK_DIR }}/${{ inputs.slug }}
-        
       - name: Delete dev track
         uses: ./.github/actions/track-delete
         with:
