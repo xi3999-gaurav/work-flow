@@ -60,9 +60,10 @@ jobs:
           path: ${{ env.TRACK_DIR }}/${{ inputs.slug }}
           id: ${{ env.ID }}
           
-      - name: Dev Track delete 
+      - name: Dev Track delete
+        shell: bash
         run: |
-          instruqt auth login ${{ env.INSTRUQT_TOKEN }}
+          instruqt auth login ${{ secrets.INSTRUQT_TOKEN }}
           instruqt track delete ${{ inputs.slug }}-dev
 
 
