@@ -61,7 +61,6 @@ jobs:
           id: ${{ env.ID }}
           
       - name: Dev Track delete 
-        shell: bash 
         run: |
           CMD:
             instruqt auth login ${{ env.INSTRUQT_TOKEN }}
