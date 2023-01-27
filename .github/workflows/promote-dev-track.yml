@@ -62,9 +62,8 @@ jobs:
           
       - name: Dev Track delete 
         run: |
-          CMD:
-            instruqt auth login ${{ env.INSTRUQT_TOKEN }}
-            instruqt track delete ${{ inputs.slug }}-dev
+          instruqt auth login ${{ env.INSTRUQT_TOKEN }}
+          instruqt track delete ${{ inputs.slug }}-dev
 
 
       - name: Commit Changes
