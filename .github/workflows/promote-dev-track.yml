@@ -64,7 +64,7 @@ jobs:
         shell: bash 
         run: |
           CMD:
-            instruqt auth ${{ env.INSTRUQT_TOKEN }}
+            instruqt auth login ${{ env.INSTRUQT_TOKEN }}
             instrqut track delete ${{ inputs.slug }}-dev
 
 
