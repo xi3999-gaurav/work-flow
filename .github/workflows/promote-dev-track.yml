@@ -60,11 +60,6 @@ jobs:
           path: ${{ env.TRACK_DIR }}/${{ inputs.slug }}
           id: ${{ env.ID }}
           
-      - name: Dev Track delete 
-        uses: ./.github/actions/track-delete
-        with:
-          path: ${{ env.TRACK_DIR }}/${{ inputs.slug }}-dev
-
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
