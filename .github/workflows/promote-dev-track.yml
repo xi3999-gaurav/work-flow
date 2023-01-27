@@ -65,7 +65,7 @@ jobs:
         run: |
           CMD:
             instruqt auth login ${{ env.INSTRUQT_TOKEN }}
-            instrqut track delete ${{ inputs.slug }}-dev
+            instruqt track delete ${{ inputs.slug }}-dev
 
 
       - name: Commit Changes
