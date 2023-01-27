@@ -63,7 +63,7 @@ jobs:
       - name: Dev Track delete 
         uses: ./.github/actions/track-delete
         with:
-          path: ${{ inputs.slug }}-dev
+          path: (${{ inputs.slug }})-dev
 
 
       - name: Commit Changes
